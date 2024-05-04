@@ -17,6 +17,7 @@ jobs:
 
       - name: Test Report
         uses: dorny/test-reporter@v1
+        continue-on-error: true
         with:
           artifact: /test-results-([^-]*)-(.*)/
           name: "Unit Tests Report: Gradle $1 @ $2"
